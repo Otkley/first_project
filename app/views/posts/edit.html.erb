@@ -1,20 +1,6 @@
-<%= form_with model: @post do |form| %>
-  <div>
-    <%= form.label :title%>
-    <%= form.text_field :title %>
-  </div>
+<h2>Edit Post</h2>
 
-  <div>
-    <%= form.label :content%>
-    <%= form.text_area :content %>
-  </div>
+<%= render "form", post: @post %>
 
-  <div>
-    <%= form.submit %>
-  </div>
-
-<% end %>
-
-<%= link_to 'Inicio', root_path %>
 <%= link_to 'Post', post_path(@post)%>
 <%= link_to "Eliminar", @post, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
