@@ -32,9 +32,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post.destroy
-
-    redirect_to root_path
+    if @post.destroy
+      redirect_to root_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
