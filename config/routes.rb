@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   # get '/posts', to: 'posts#index' # posts_path
   get '/posts/:id', to: 'posts#show', as: 'post' # post_path(post)
   get '/posts/:id/edit', to: 'posts#edit', as: 'edit_post' # edit_post_path(post)
+  patch '/posts/:id', to: 'posts#update'
 end
