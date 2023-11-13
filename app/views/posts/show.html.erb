@@ -1,0 +1,19 @@
+<div>
+  <div>
+    <h2><%= @post.title %></h2>
+  </div>
+
+  <div>
+    <p>
+      <%= @post.content %>
+    </p>
+  </div>
+
+  <div>
+    <%= link_to 'Inicio', root_path %>
+    <%= link_to 'Editar', edit_post_path(@post)%>
+  </div>
+</div>
+
+
+
