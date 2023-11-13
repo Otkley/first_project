@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root 'posts#index'
-
   # get '/posts', to: 'posts#index' # posts_path
+  get '/posts/:id', to: 'posts#show', as: 'post' # posts_path(post)
 end
