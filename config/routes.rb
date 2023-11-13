@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   root 'posts#index'
   # get '/posts', to: 'posts#index' # posts_path
-  get '/posts/:id', to: 'posts#show', as: 'post' # posts_path(post)
+  get '/posts/:id', to: 'posts#show', as: 'post' # post_path(post)
+  get '/posts/:id/edit', to: 'posts#edit', as: 'edit_post' # edit_post_path(post)
 end
