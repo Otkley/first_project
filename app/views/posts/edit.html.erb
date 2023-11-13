@@ -17,3 +17,4 @@
 
 <%= link_to 'Inicio', root_path %>
 <%= link_to 'Post', post_path(@post)%>
+<%= link_to "Eliminar", @post, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
