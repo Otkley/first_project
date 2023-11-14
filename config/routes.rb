@@ -12,4 +12,11 @@ Rails.application.routes.draw do
   patch '/posts/:id', to: 'posts#update'
   post '/posts', to: 'posts#create'
   delete '/posts/:id', to: 'posts#destroy'
+  # resources :posts
+
+  namespace :api do
+    namespace :v1 do
+      resources :posts, only: [:index, :show, :create, :update, :destroy]
+    end
+  end
 end
